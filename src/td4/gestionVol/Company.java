@@ -19,8 +19,13 @@ public class Company {
 
     // Creer des vols
     public void propose(NumVol num,ZonedDateTime dep, ZonedDateTime ar){
-        Vol vol = new Vol(num,dep,ar);
-        vols.add(vol);
+        if(ar.compareTo(dep) <= 0){
+            throw new IllegalArgumentException("Date de depart est superieure a la date d'arrivee !!! ");
+        }
+        else{
+            Vol vol = new Vol(num,dep,ar);
+            vols.add(vol);
+        }
     }
 
     // Methode pour afficher les details de la compagnie
