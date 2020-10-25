@@ -4,8 +4,10 @@ import java.time.Duration;
 import java.time.ZonedDateTime;
 
 public class Escale {
-    private ZonedDateTime depart ;
     private ZonedDateTime arrivee ;
+    private ZonedDateTime depart ;
+    private Aeroport aero_esc ;
+
     private Duration duree ;
 
     // Constructeur
@@ -19,5 +21,9 @@ public class Escale {
         return Duration.between(d1, d2);
     }
 
+    // Associer un aeroport a un escale
+    public Escale(Aeroport aero_esc){
+        this.aero_esc = aero_esc ;
+    }
 
 }

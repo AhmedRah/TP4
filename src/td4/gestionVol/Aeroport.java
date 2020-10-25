@@ -1,13 +1,18 @@
 package td4.gestionVol;
 
 public class Aeroport {
-    public String nom ;
-    public String code ;
+    private String nom ;
+    private String code ;
+    private Ville ville ;
 
+    public Aeroport(String nom ,String code){
+        this.nom =  nom ;
+        this.code = code;
+    }
 
-    // methode deservir
-    public Aeroport(String nom_ville){
-        Ville ville = new Ville(nom_ville);
+    // associer l'aeroport a une ville
+    public Aeroport(Ville ville){
+        this.ville = ville ;
     }
     //getters
     public String get_nom (){

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Company {
-    public String nom ;
+    private String nom ;
     private List<Vol> vols = new ArrayList<>();
         
     // Un constructeur du nom
@@ -19,13 +19,11 @@ public class Company {
 
     // Creer des vols
     public void propose(NumVol num,ZonedDateTime dep, ZonedDateTime ar){
-        Vol vol1 = new Vol(num,dep,ar);
-        vol1.info();
-
-        vols.add(vol1);
+        Vol vol = new Vol(num,dep,ar);
+        vols.add(vol);
     }
 
-
+    // Methode pour afficher les details de la compagnie
     public void info(){
         System.out.println("****** Datails du company: ******");
         System.out.println("Nom :"+nom);
@@ -34,4 +32,5 @@ public class Company {
             System.out.println(x.getNumVol());
         }
     }
+
 }

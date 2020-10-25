@@ -19,7 +19,7 @@ public class Vol {
 
     // Getteur du nom du vol
     public String getNumVol(){
-        return numerovol.numero;
+        return numerovol.getNumVol();
     }
     // constructeure pour creer un vol 
     public Vol(NumVol numerovol, ZonedDateTime dateDepart, ZonedDateTime dateArrivee){
@@ -47,11 +47,11 @@ public class Vol {
     }
 
     // Associer les aeroport de depart et d'arrivee au vol
-    public void depart (String nom){
-        Aeroport aeroport = new Aeroport(nom);
+    public void depart (String nom , String code){
+        Aeroport aeroport = new Aeroport(nom , code);
     }
-    public void arrivee (String nom){
-        Aeroport aeroport = new Aeroport(nom);
+    public void arrivee (String nom , String code){
+        Aeroport aeroport = new Aeroport(nom , code);
     }
 
     public void add_Escale(Escale escale){
