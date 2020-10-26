@@ -1,25 +1,26 @@
-package td4.gestionVol;
+package td4;
 
 public class Aeroport {
     private String nom ;
     private String code ;
     private Ville ville ;
 
-    public Aeroport(String nom ,String code){
+    // Constructeur
+    public Aeroport(String nom ,String code,Ville ville){
         this.nom =  nom ;
         this.code = code;
-    }
-
-    // associer l'aeroport a une ville
-    public Aeroport(Ville ville){
         this.ville = ville ;
     }
-    //getters
+
+    //getters des attributs
     public String get_nom (){
         return nom ;
     }
     public String get_code (){
         return code ;
+    }
+    public Ville getVille(){
+        return ville ;
     }
 
 

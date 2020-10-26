@@ -1,27 +1,22 @@
-package td4.gestionVol;
+package td4;
 
-import org.hamcrest.core.IsInstanceOf;
 import org.junit.jupiter.api.Test;
-import java.sql.SQLOutput;
+
+import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.Callable;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class TestGestVol {
     @Test
-    public void testNumVol(){
+    public static void testNumVol(){
         // Tests de reussite
-        assertThat(NumVol.set_numvol("24XC12"),equals("24XC12"));
+        assertThat(NumVol.set_numvol("24XC12"),equalTo("24XC12"));
         // Tests d'echec
-        assertThat(exceptionOf(()-> NumVol.set_numvol("000000")), instanceof(IllegalArgumentException.class));
+        assertThat(exceptionOf(()-> NumVol.set_numvol("000000")),instanceOf(IllegalArgumentException.class));
     }
-    @Test
-    public void testCompagnie(){
-        // Test de reussite
-//        assertThat(Company.propose("24"));
-    }
-
-
 
 
     //Help you to handle exception. :-)
