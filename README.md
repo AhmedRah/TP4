@@ -7,11 +7,14 @@ Transforming a UML to a Java Program.
   - ArrayList : Pour groupes les ZonedDateTime ; Pour faciliter la lecture du code
   - ArrayList : des compagnie (Ordre non important)
       - ArrayList : des vols de chque compagnie (ordre non important dans notre cas d'utilisation)
-          - LinkedHashSet : Pour les escales de chaque vols (Order Improtant , et element unique)
--   
+          - LinkedHashSet : Pour les escales de chaque vols (Order Improtant , et element unique)   
   - ArrayList : des Cleints
     - ArrayList : des Reservations de chaque clients
  - On a utiliser deux Interfaces , Etape et Personne :
-  - Etape : Une interface utiliser dans Escale et Vol , declare quelques methodes (je voulait ajouter la methode calc_duree dans l'interface , mais on l'as mis avec signature prives , et on voulait pas changer toute la classe )
-  - Personne : une interface pour les classe Client et Passager (vue que les deux sont des personnes) : <strong>Mais a la fin , on ne l'a pas utliser😅</strong>
-  
+    - Etape : Une interface utiliser dans Escale et Vol , declare quelques methodes (je voulait ajouter la methode calc_duree dans l'interface , mais on l'as mis avec signature prives , et on voulait pas changer toute la classe )
+    - Personne : une interface pour les classe Client et Passager (vue que les deux sont des personnes) : <strong>Mais a la fin , on ne l'a pas utliser😅</strong>
+  - Pour les status des Vols , On avait plusieurs idees dont on a choisie le suivant :
+    - Tout les vols sont ouvert lors de leurs creation (On a utliser une boucle pour ouvrir tout les vols dans le main , mais on pouvait l'unitialiser dans la class)
+    - Les vols sont fermees automatiquement quand la duree entre la duree d'execution et le depart du vol est moins de 6h (simmilarie la fermeture des enregistrement)
+  - Pour les Reservations :
+    - Tout les reservations sont confirmees apres 24h apres leur creations sauf avec intervention du propeitaire (Similaire au reservation modifiable sous 24h , apres non rembourssable)
